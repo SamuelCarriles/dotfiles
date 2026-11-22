@@ -1,0 +1,26 @@
+{:doc "NixOS config - dendritic pattern - host valkyrie"
+ :layout [".gitignore"                    ;; ignora el result
+          "flake.nix"                     ;; inputs + mkFlake con import-tree
+          "flake.lock"                    ;; versiones fijadas (se sube a git)
+          "hardware-configuration.nix"    ;; el generado por NixOS, fuera de modules/
+
+          ["modules/"
+           "flake-parts.nix"              ;; systems + importar flakeModules.modules
+           "boot.nix"                     ;; systemd-boot, efi, kernel latest
+           "networking.nix"               ;; NetworkManager
+           "locale.nix"                   ;; timezone, i18n, extraLocaleSettings, teclado xkb
+           "nix.nix"                      ;; experimental-features, allowUnfree
+           "users.nix"                    ;; usuario sack, grupos
+           "audio.nix"                    ;; pipewire, rtkit, pulseaudio off
+           "desktop.nix"                  ;; niri, ly, waybar, noctalia, thunar, tumbler, gvfs, udisks2, temas, cursores, iconos, OZONE_WL
+           "keyring.nix"                  ;; gnome-keyring, seahorse, pam de ly
+           "hardware.nix"                 ;; bluetooth, upower, power-profiles-daemon, printing
+           "fonts.nix"                    ;; font-awesome, jetbrains-mono nerd
+           "shell.nix"                    ;; bash, carapace, bat, yazi, EDITOR y variables de carapace
+           "dev.nix"                      ;; git, lazygit, gh, neovim + LSPs, clojure, babashka, temurin, gcc, make, ripgrep, fd
+           "media.nix"                    ;; mpv, imv, strawberry + xdg.mime.defaultApplications
+           "apps.nix"                     ;; chromium, obsidian, telegram, proton-vpn, localsend, onlyoffice, ardour
+
+           ["hosts/"
+            "valkyrie.nix"                ;; hostName, stateVersion, hardware import, lista de funcionalidades
+            ]]]}
