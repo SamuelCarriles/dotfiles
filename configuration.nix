@@ -37,22 +37,9 @@
     glib
     unzip
     # Dev kit
-    git
-    lazygit
-    gh
-    neovim
-    clojure
-    babashka
-    bbin
-    temurin-bin-25
     wget
     curl
-    gcc
     gnutar
-    gnumake
-    tree-sitter
-    ripgrep
-    fd
 
     alacritty
     xwayland-satellite
