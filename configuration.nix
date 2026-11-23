@@ -10,40 +10,7 @@
     ./hardware-configuration.nix
   ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "valkyrie"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "America/Havana";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "es_CU";
-    LC_IDENTIFICATION = "es_CU";
-    LC_MEASUREMENT = "es_CU";
-    LC_MONETARY = "es_CU";
-    LC_NAME = "es_CU";
-    LC_NUMERIC = "es_CU";
-    LC_PAPER = "es_CU";
-    LC_TELEPHONE = "es_CU";
-    LC_TIME = "es_CU";
-  };
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -60,34 +27,12 @@
   services.displayManager.ly.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "altgr-intl";
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-
-  nix.settings = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."sack" = {
-    isNormalUser = true;
-    description = "Samuel Carriles";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-  };
 
   # Install Thunar
   programs.thunar = {

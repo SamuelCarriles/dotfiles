@@ -8,6 +8,12 @@ in
       ../../configuration.nix
       nixos.fonts
       nixos.audio
+      nixos.networking
+      nixos.nix
+      nixos.users
+      nixos.locale
+      nixos.boot
+
     ];
   };
   flake.nixosConfigurations.valkyrie = inputs.nixpkgs.lib.nixosSystem {
