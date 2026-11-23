@@ -55,14 +55,11 @@
     fd
 
     alacritty
-    carapace
-    bat
     xwayland-satellite
     waybar
     noctalia
 
     phinger-cursors
-    yazi
     adw-gtk3
     papirus-icon-theme
     # Cosas de neovim
@@ -73,20 +70,8 @@
     clojure-lsp
   ];
 
-  programs.bash = {
-    interactiveShellInit = ''
-      bind 'set show-all-if-ambiguous on'
-      bind 'TAB:menu-complete'
-      source <(carapace _carapace bash)
-    '';
-  };
   environment.localBinInPath = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.variables = {
-    EDITOR = "nvim";
-    CARAPACE_BRIDGES = "bash";
-    CARAPACE_MATCH = "1";
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

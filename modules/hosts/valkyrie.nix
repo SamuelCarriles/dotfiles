@@ -17,6 +17,7 @@ in
       nixos.hardware
       nixos.apps
       nixos.media
+      nixos.shell
     ];
   };
   flake.nixosConfigurations.valkyrie = inputs.nixpkgs.lib.nixosSystem {
