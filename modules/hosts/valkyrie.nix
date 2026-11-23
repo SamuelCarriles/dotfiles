@@ -4,8 +4,10 @@ let
 in
 {
   flake.modules.nixos.valkyrie = {
+    networking.hostName = "valkyrie";
+    system.stateVersion = "26.05";
     imports = [
-      ../../configuration.nix
+      ../../hardware-configuration.nix
       nixos.fonts
       nixos.audio
       nixos.networking
@@ -19,6 +21,7 @@ in
       nixos.media
       nixos.shell
       nixos.dev
+      nixos.desktop
     ];
   };
   flake.nixosConfigurations.valkyrie = inputs.nixpkgs.lib.nixosSystem {
