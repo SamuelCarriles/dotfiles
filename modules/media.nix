@@ -25,6 +25,7 @@
         "video/mp4" = mpv;
         "video/x-matroska" = mpv;
         "video/webm" = mpv;
+        "video/ts" = mpv;
 
         "audio/mpeg" = stb;
         "audio/flac" = stb;
