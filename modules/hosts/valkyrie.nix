@@ -15,6 +15,8 @@ in
       nixos.boot
       nixos.keyring
       nixos.hardware
+      nixos.apps
+      nixos.media
     ];
   };
   flake.nixosConfigurations.valkyrie = inputs.nixpkgs.lib.nixosSystem {

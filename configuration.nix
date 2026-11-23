@@ -29,9 +29,6 @@
   # Install Niri WM
   programs.niri.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # Fonts
 
   # List packages installed in system profile.
@@ -64,25 +61,10 @@
     waybar
     noctalia
 
-    chromium
     phinger-cursors
     yazi
     adw-gtk3
     papirus-icon-theme
-    proton-vpn
-    localsend
-    obsidian
-    telegram-desktop
-    # DAW
-    ardour
-    # Reproductor de video
-    mpv
-    # Visualizador de imgs
-    imv
-    # Reproductor de audio
-    strawberry
-    # Editor de documentos
-    onlyoffice-desktopeditors
     # Cosas de neovim
     lua-language-server
     nil
@@ -105,31 +87,6 @@
     CARAPACE_BRIDGES = "bash";
     CARAPACE_MATCH = "1";
   };
-
-  # Mime defaults
-  xdg.mime.enable = true;
-  xdg.mime.defaultApplications =
-    let
-      stb = "org.strawberrymusicplayer.strawberry.desktop";
-      imvd = "imv-dir.desktop";
-      mpv = "mpv.desktop";
-    in
-    {
-      "image/png" = imvd;
-      "image/jpeg" = imvd;
-      "image/webp" = imvd;
-      "image/gif" = imvd;
-
-      "video/mp4" = mpv;
-      "video/x-matroska" = mpv;
-      "video/webm" = mpv;
-
-      "audio/mpeg" = stb;
-      "audio/flac" = stb;
-      "audio/ogg" = stb;
-      "audio/mp4" = stb;
-      "audio/x-wav" = stb;
-    };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
