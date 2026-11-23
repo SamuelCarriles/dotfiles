@@ -13,7 +13,8 @@ in
       nixos.users
       nixos.locale
       nixos.boot
-
+      nixos.keyring
+      nixos.hardware
     ];
   };
   flake.nixosConfigurations.valkyrie = inputs.nixpkgs.lib.nixosSystem {

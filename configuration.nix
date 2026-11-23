@@ -16,23 +16,9 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = false;
 
-  hardware.bluetooth.enable = true;
-  services.upower.enable = true;
-  services.power-profiles-daemon.enable = true;
-  # Llavero
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.ly.enableGnomeKeyring = true;
-  programs.seahorse.enable = true;
-
   services.displayManager.ly.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
 
   # Install Thunar
   programs.thunar = {
