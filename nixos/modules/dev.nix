@@ -1,5 +1,6 @@
 {
   flake.modules.nixos.dev = { pkgs, ... }: {
+    programs.direnv.enable = true; # activar direnv
     environment = {
       localBinInPath = true; # para que los scripts de bbin puedan correr bien
       sessionVariables.NIXOS_OZONE_WL = "1";
