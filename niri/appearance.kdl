@@ -1,0 +1,19 @@
+prefer-no-csd
+
+cursor {
+  xcursor-theme "phinger-cursors-dark-left"
+  xcursor-size 30
+}
+
+overview {
+  backdrop-color "#000000"
+}
+
+animations {
+    // Uncomment to turn off all animations.
+    // off
+
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 3.0
+}
+

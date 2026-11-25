@@ -1,0 +1,12 @@
+{:doc "Módulos de configuración de Niri"
+ :layout ["input.kdl"
+          "outputs.kdl"
+          "layout.kdl"
+          "appearance.kdl"
+          "startup.kdl"
+          "misc.kdl"
+          "rules.kdl"
+          ["binds/" "apps.kdl" "navigation.kdl" "windows.kdl" "system.kdl"]
+          "layout.edn"
+          "README.md"
+          "config.kdl"]}
