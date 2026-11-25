@@ -16,16 +16,19 @@
 
     programs.niri.enable = true;
 
-    environment.systemPackages = with pkgs; [
-      alacritty
-      xwayland-satellite
-      waybar
-      noctalia
-      phinger-cursors
-      adw-gtk3
-      papirus-icon-theme
-      glib
-    ];
+    environment = {
+      sessionVariables.NIXOS_OZONE_WL = "1";
 
+      systemPackages = with pkgs; [
+        alacritty
+        xwayland-satellite
+        waybar
+        noctalia
+        phinger-cursors
+        adw-gtk3
+        papirus-icon-theme
+        glib
+      ];
+    };
   };
 }

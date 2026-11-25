@@ -21,6 +21,7 @@ in
       nixos.media
       nixos.shell
       nixos.dev
+      nixos.neovim
       nixos.desktop
     ];
   };
