@@ -1,0 +1,8 @@
+[general]
+import = [
+    "config/window.toml",
+    "config/font.toml",
+    "config/cursor.toml",
+    "config/mouse.toml",
+    "config/keyboard.toml",
+]
